@@ -17,9 +17,9 @@ except ImportError:
 
 
 if getattr(sys, 'frozen', None):
-    base_dir = sys._MEIPASS
+    base_dir = os.path.join(sys._MEIPASS, 'usedres')
 else:
-    base_dir = os.path.dirname(__file__)
+    base_dir = os.path.join(os.path.dirname(__file__), 'usedres')
 
 
 def changeBackground(img, img_back, zoom_size, center):
