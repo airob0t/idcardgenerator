@@ -2,12 +2,19 @@
 import os
 import PIL.Image as PImage
 from PIL import ImageFont, ImageDraw
-from Tkinter import *
-from ttk import *
-from tkFileDialog import *
-from tkMessageBox import *
 import cv2
 import numpy as np
+try:
+    from Tkinter import *
+    from ttk import *
+    from tkFileDialog import *
+    from tkMessageBox import *
+except ImportError:
+    from tkinter import *
+    from tkinter.ttk import *
+    from tkinter.filedialog import *
+    from tkinter.messagebox import *
+
 
 if getattr(sys, 'frozen', None):
     base_dir = sys._MEIPASS
