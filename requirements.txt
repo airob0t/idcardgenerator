@@ -1,2 +1,3 @@
 numpy==1.14.0
 Pillow==5.0.0
+PyInstaller==3.3.1

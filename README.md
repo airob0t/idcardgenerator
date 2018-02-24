@@ -4,15 +4,36 @@
 可以选择是否自动抠图，对自动抠图效果不满意可以手动抠图。
 
 在线抠图地址:https://burner.bonanza.com/
-<br />抠透明背景头像方便
-
-旧版下载地址：https://github.com/airob0t/idcardgenerator/releases/download/1.0/idcardgenerator.zip
 
 ## 更新:
 - 1.自动改变头像大小
 - 2.自动从纯色背景中抠图
 - 3.需要安装opencv
 
+## 环境
+- numpy
+- pillow
+- opencv
+
+## 下载
+### Windows
+[下载](https://github.com/airob0t/idcardgenerator/releases/download/win_v1.1/idcardgenerator.exe)
+### Mac
+[下载](https://github.com/airob0t/idcardgenerator/releases/download/v1.1/idcardgenerator)
+
+## 打包程序
+
+安装pyinstaller
+
+`pip install pyinstaller`
+
+Mac打包(打包成Mac app尚有问题未解决)
+
+    pyinstaller -i usedres/ico.icns --windowed --clean --noconfirm --onefile --add-data ./usedres:./usedres idcardgenerator.py
+
+Windows打包
+
+    pyinstaller -i usedres/ico.ico --windowed --clean --noconfirm --onefile --add-data usedres;usedres idcardgenerator.py
 
 ## 参照标准：
 ### 正面
