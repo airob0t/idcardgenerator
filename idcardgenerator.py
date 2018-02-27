@@ -153,5 +153,5 @@ if __name__ == '__main__':
     ebg.grid(row=6, column=1, sticky=W, padx=3, pady=3, columnspan=5)
     Button(root, text=u'生成', width=32, command=generator).grid(row=7, column=1, sticky=W, padx=3, pady=3, columnspan=4)
 
-    root.iconbitmap(os.path.join(base_dir, 'ico.ico'))
+    # root.iconbitmap(os.path.join(base_dir, 'ico.ico'))
     root.mainloop()
