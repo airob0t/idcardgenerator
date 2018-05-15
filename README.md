@@ -4,6 +4,7 @@
 可以选择是否自动抠图，自动抠图目前仅支持蓝色背景，对自动抠图效果不满意可以手动抠图。
 
 在线抠图地址:https://burner.bonanza.com/
+https://www.gaoding.com/koutu
 
 ## 更新:
 - 1.自动改变头像大小
