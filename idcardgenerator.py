@@ -30,8 +30,12 @@ def changeBackground(img, img_back, zoom_size, center):
     # 转换hsv
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     # 获取mask
-    lower_blue = np.array([78, 43, 46])
-    upper_blue = np.array([110, 255, 255])
+    #lower_blue = np.array([78, 43, 46])
+    #upper_blue = np.array([110, 255, 255])
+    diff = [5, 30, 30]
+    gb = hsv[0, 0]
+    lower_blue = np.array(gb - diff)
+    upper_blue = np.array(gb + diff)
     mask = cv2.inRange(hsv, lower_blue, upper_blue)
     # cv2.imshow('Mask', mask)
 
@@ -95,15 +99,18 @@ def generator():
     draw.text((950, 1475), idn, fill=(0, 0, 0), font=id_font)
     draw.text((1050, 2750), org, fill=(0, 0, 0), font=other_font)
     draw.text((1050, 2895), life, fill=(0, 0, 0), font=other_font)
-
-    avatar = cv2.cvtColor(np.asarray(avatar), cv2.COLOR_RGB2BGR)
-    im = cv2.cvtColor(np.asarray(im), cv2.COLOR_RGB2BGR)
+    
     if ebgvar.get():
+        avatar = cv2.cvtColor(np.asarray(avatar), cv2.COLOR_RGBA2BGRA)
+        im = cv2.cvtColor(np.asarray(im), cv2.COLOR_RGBA2BGRA)
         im = changeBackground(avatar, im, (500, 670), (690, 1500))
+        im = PImage.fromarray(cv2.cvtColor(im, cv2.COLOR_BGRA2RGBA))
     else:
-        #im.paste(avatar, (1500, 690), mask=avatar)
-        im = paste(avatar, im, (500, 670), (690, 1500))
-    im = PImage.fromarray(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
+        avatar = avatar.resize((500, 670))
+        avatar = avatar.convert('RGBA')
+        im.paste(avatar, (1500, 690), mask=avatar)
+        #im = paste(avatar, im, (500, 670), (690, 1500))
+        
 
     im.save('color.png')
     im.convert('L').save('bw.png')
