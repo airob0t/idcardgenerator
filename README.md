@@ -24,7 +24,7 @@
 
 ## 下载
 ### Windows
-[下载](https://github.com/airob0t/idcardgenerator/releases/download/win_v1.2/idcardgenerator.exe)
+[下载](https://github.com/airob0t/idcardgenerator/releases/download/win_v1.3/idcardgenerator.exe)
 ### Mac
 [下载](https://github.com/airob0t/idcardgenerator/releases/download/v1.1/idcardgenerator)
 
@@ -40,7 +40,7 @@ Mac打包(打包成Mac app尚有问题未解决)
 
 Windows打包
 
-    pyinstaller -i usedres/ico.ico --windowed --clean --noconfirm --onefile --add-data usedres;usedres idcardgenerator.py
+    pyinstaller -i usedres/ico.ico --windowed --clean --noconfirm --onefile --add-data "usedres;usedres" idcardgenerator.py
 
 ## 参照标准：
 ### 正面
