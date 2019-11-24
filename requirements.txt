@@ -1,6 +1,0 @@
-altgraph==0.16.1
-macholib==1.11
-numpy==1.17.4
-opencv-python==4.1.1.26
-Pillow==6.2.1
-PyInstaller==3.5
