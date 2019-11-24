@@ -121,7 +121,7 @@ def generator():
 def run():
     global ename, esex, enation, eyear, emon, eday, eaddr, eidn, eorg, elife, ebgvar
     root = Tk()
-    root.title(u'AIRobot身份证图片生成器')
+    root.title(u'AIRobot身份证图片生成器 请遵守法律法规')
     # root.geometry('640x480')
     root.resizable(width=False, height=False)
     Label(root, text=u'姓名:').grid(row=0, column=0, sticky=W, padx=3, pady=3)

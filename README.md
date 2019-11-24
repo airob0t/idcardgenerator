@@ -10,9 +10,9 @@
 (https://www.gaoding.com/koutu)
 
 ## 更新:
-- 1.自动改变头像大小
-- 2.自动从纯色背景中抠图
-- 3.需要安装opencv
+- 自动改变头像大小
+- 自动从纯色背景中抠图
+- 支持pip安装
 
 ## ToDo
 - 自动从复杂背景下抠图
@@ -23,6 +23,15 @@
 - opencv
 
 ## 下载
+## pip安装
+`pip install idcardgenerator`
+
+```
+from idcardgenerator import gui
+gui.run()
+```
+文件会生成在运行目录
+
 ### Windows
 [下载](https://github.com/airob0t/idcardgenerator/releases/download/win_v1.3/idcardgenerator.exe)
 ### Mac
